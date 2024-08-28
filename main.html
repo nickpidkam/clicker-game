@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+    <head>
+        <title>Clicker Game</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+
+    <audio>
+        <audio id="click-sound" src="sounds/click-sound.mp3"></audio>
+        <audio id="upgrade-purchased" src="sounds/upgrade-purchased.mp3"></audio>
+    </audio>
+
+<body>
+    <header>
+        <h1 class="clicker-game-title">Nick's Clicker Game</h1>
+    </header>
+
+    <main class="game">
+        <button id="main-button" class="button"></button>
+        <p id="count-value">0</p>
+
+        <div class="upgrades">
+            <!-- First upgrade is shown automatically, any subsequent is hidden. -->
+            <div class="upgrade-wrapper">
+                <button class="button" id="upgrade1">Enhanced Worm Grabber</button>
+                <p>Cost: <p class="upgrade-cost">100</p></p>
+            </div>
+
+            <div class="upgrade-wrapper" style="display: none">
+                <button class="button" id="upgrade2">Mega Worm Grabber</button>
+                <p>Cost: <p class="upgrade-cost">500</p></p>
+            </div>
+        </div>
+
+        <div class="overlay"></div>
+        <button class="stats-button">Stats</button>
+        <div id="stats-menu" class="stats-menu">
+            <h2>Game Stats</h2>
+            <p id="total-clicks"></p>
+            <p id="total-upgrades"></p>
+            <button id="close-stats" class="button">Close</button>
+        </div>
+    </main>
+
+
+    <p id="cheats-display" style="display: none">CHEATS ON</p>
+    <script src="script.js" ></script>
+</body>
+</html>
